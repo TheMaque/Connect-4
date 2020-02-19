@@ -31,7 +31,7 @@ namespace Connect_4
 		int turn_count;
 		int Turns = 0;
 		bool playerTurn = true;
-		int[,] Connect4Grid = new int [7,6];
+		int[,] Connect4Grid = new int [6,7];
 
 		private void ButtonClicked(object sender, EventArgs e)
 		{
@@ -48,6 +48,21 @@ namespace Connect_4
 
 			playerTurn = !playerTurn;
 		}
+
+		/// <summary>
+		/// This method clears the Game Board Array in preparation for a new game
+		/// </summary>
+		//private void ClearTheBoardArray()
+		//{
+		//	for (int row = 0; row < Connect4Grid.GetLength(0); row++)
+		//	{
+		//		for (int col = 0; col < Connect4Grid.GetLength(1); col++)
+		//		{
+		//		 Connect4Grid[row, col] = "-";
+		//		}
+		//	}
+		//}
+
 		private Bitmap SetImage()
 		{
 			return (playerTurn) ? Properties.Resources.Red_Coin : Properties.Resources.White_Coin;
@@ -56,7 +71,7 @@ namespace Connect_4
 		// Procedure for enabling or disabling a picture box to be clicked or whe  game is reset
 		private void MassSetPictureBoxEnable(bool howToSet)
 		{
-			foreach (Control controlUsed in Controls)
+			foreach (Control controlUsed in Controls["grpGameBoard"].Controls)
 			{
 				if (controlUsed is PictureBox) controlUsed.Enabled = howToSet;
 			}
@@ -65,7 +80,7 @@ namespace Connect_4
 		// Procedure for clearing of picture boxes when game is reset
 		private void MassSetPictureBoxImage()
 		{
-			foreach (Control controlUsed in Controls)
+			foreach (Control controlUsed in Controls["grpGameBoard"].Controls)
 			{
 				if (controlUsed is PictureBox)
 				{
@@ -75,6 +90,16 @@ namespace Connect_4
 
 		}
 		
+		/// <summary>
+		/// Based on player turn determines the value to be placed in the array 
+		/// </summary>
+		/// <returns>"R" for the Red Coin player, "W" for White Coin</returns>
+		private string SetPlayerValue()
+		{
+			return (playerTurn) ? "R" : "W";
+		}
+
+
 		// Reset turns
 		private void TurnCountReset()
 		{
@@ -87,6 +112,7 @@ namespace Connect_4
 			MassSetPictureBoxEnable(true);
 			MassSetPictureBoxImage();
 			TurnCountReset();
+			//ClearTheBoardArray();
 
 		}
 
