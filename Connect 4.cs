@@ -10,6 +10,16 @@ using System.Windows.Forms;
 
 namespace Connect_4
 {
+	/* Name: Reggie Telemaque 
+	 * 
+	 * Date: 02/18/2020
+	 *  
+	 *  Program: Connect 4
+	 *
+	 *  Purpose: A Connect 4 program that takes user input and changes pictureboxes corresponding to the users choice.
+	 * 
+	 */
+
 	public partial class Connect4 : Form
 	{
 		public Connect4()
@@ -41,6 +51,50 @@ namespace Connect_4
 		private Bitmap SetImage()
 		{
 			return (playerTurn) ? Properties.Resources.Red_Coin : Properties.Resources.White_Coin;
+		}
+
+		// Procedure for enabling or disabling a picture box to be clicked or whe  game is reset
+		private void MassSetPictureBoxEnable(bool howToSet)
+		{
+			foreach (Control controlUsed in Controls)
+			{
+				if (controlUsed is PictureBox) controlUsed.Enabled = howToSet;
+			}
+		}
+
+		// Procedure for clearing of picture boxes when game is reset
+		private void MassSetPictureBoxImage()
+		{
+			foreach (Control controlUsed in Controls)
+			{
+				if (controlUsed is PictureBox)
+				{
+					((PictureBox)controlUsed).Image = null;
+				}
+			}
+
+		}
+		
+		// Reset turns
+		private void TurnCountReset()
+		{
+			turn_count = 0;
+		}
+
+
+		private void msReset_Click(object sender, EventArgs e)
+		{
+			MassSetPictureBoxEnable(true);
+			MassSetPictureBoxImage();
+			TurnCountReset();
+
+		}
+
+		private void msDiagnostics_Click(object sender, EventArgs e)
+		{
+			Diagnostics diagWindow = new Diagnostics();
+
+			diagWindow.Show();
 		}
 	}
 }

@@ -166,8 +166,9 @@
 			this.msReset.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.msReset.ForeColor = System.Drawing.SystemColors.Control;
 			this.msReset.Name = "msReset";
-			this.msReset.Size = new System.Drawing.Size(135, 22);
+			this.msReset.Size = new System.Drawing.Size(180, 22);
 			this.msReset.Text = "Reset";
+			this.msReset.Click += new System.EventHandler(this.msReset_Click);
 			// 
 			// msDiagnostics
 			// 
@@ -175,8 +176,9 @@
 			this.msDiagnostics.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.msDiagnostics.ForeColor = System.Drawing.SystemColors.Control;
 			this.msDiagnostics.Name = "msDiagnostics";
-			this.msDiagnostics.Size = new System.Drawing.Size(135, 22);
+			this.msDiagnostics.Size = new System.Drawing.Size(180, 22);
 			this.msDiagnostics.Text = "Diagnostics";
+			this.msDiagnostics.Click += new System.EventHandler(this.msDiagnostics_Click);
 			// 
 			// grpGameBoard
 			// 
@@ -758,9 +760,10 @@
 			this.Controls.Add(this.grpGameBoard);
 			this.Controls.Add(this.picLogo);
 			this.Controls.Add(this.lblTurn);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Connect4";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Connect 4";
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
 			this.msStrip.ResumeLayout(false);
