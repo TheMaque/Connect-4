@@ -63,6 +63,16 @@ namespace Connect_4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BRUSH_arrow_tictactoe {
+            get {
+                object obj = ResourceManager.GetObject("BRUSH_arrow_tictactoe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bull_Maque_Logo_3D_with_text {
             get {
                 object obj = ResourceManager.GetObject("Bull_Maque_Logo_3D_with_text", resourceCulture);
