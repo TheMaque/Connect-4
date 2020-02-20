@@ -81,6 +81,8 @@
 			this.txtPlayer2 = new System.Windows.Forms.TextBox();
 			this.txtPlayer1 = new System.Windows.Forms.TextBox();
 			this.lblNames = new System.Windows.Forms.Label();
+			this.lblPlayer1 = new System.Windows.Forms.Label();
+			this.lblPlayer2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -755,14 +757,14 @@
 			// 
 			// txtPlayer2
 			// 
-			this.txtPlayer2.Location = new System.Drawing.Point(22, 302);
+			this.txtPlayer2.Location = new System.Drawing.Point(21, 274);
 			this.txtPlayer2.Name = "txtPlayer2";
 			this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
 			this.txtPlayer2.TabIndex = 33;
 			// 
 			// txtPlayer1
 			// 
-			this.txtPlayer1.Location = new System.Drawing.Point(22, 252);
+			this.txtPlayer1.Location = new System.Drawing.Point(22, 192);
 			this.txtPlayer1.Name = "txtPlayer1";
 			this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
 			this.txtPlayer1.TabIndex = 34;
@@ -770,14 +772,39 @@
 			// lblNames
 			// 
 			this.lblNames.AutoSize = true;
-			this.lblNames.BackColor = System.Drawing.Color.DimGray;
+			this.lblNames.BackColor = System.Drawing.Color.Transparent;
 			this.lblNames.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblNames.ForeColor = System.Drawing.SystemColors.Control;
-			this.lblNames.Location = new System.Drawing.Point(19, 217);
+			this.lblNames.Location = new System.Drawing.Point(38, 142);
 			this.lblNames.Name = "lblNames";
-			this.lblNames.Size = new System.Drawing.Size(45, 15);
+			this.lblNames.Size = new System.Drawing.Size(63, 18);
 			this.lblNames.TabIndex = 35;
 			this.lblNames.Text = "Names:";
+			// 
+			// lblPlayer1
+			// 
+			this.lblPlayer1.AutoSize = true;
+			this.lblPlayer1.BackColor = System.Drawing.Color.DimGray;
+			this.lblPlayer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPlayer1.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPlayer1.Location = new System.Drawing.Point(44, 174);
+			this.lblPlayer1.Name = "lblPlayer1";
+			this.lblPlayer1.Size = new System.Drawing.Size(50, 15);
+			this.lblPlayer1.TabIndex = 36;
+			this.lblPlayer1.Text = "Player 1:";
+			// 
+			// lblPlayer2
+			// 
+			this.lblPlayer2.AutoSize = true;
+			this.lblPlayer2.BackColor = System.Drawing.Color.DimGray;
+			this.lblPlayer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPlayer2.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPlayer2.Location = new System.Drawing.Point(44, 256);
+			this.lblPlayer2.Name = "lblPlayer2";
+			this.lblPlayer2.Size = new System.Drawing.Size(47, 15);
+			this.lblPlayer2.TabIndex = 37;
+			this.lblPlayer2.Text = "Player 2";
 			// 
 			// Connect4
 			// 
@@ -785,6 +812,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
+			this.Controls.Add(this.lblPlayer2);
+			this.Controls.Add(this.lblPlayer1);
 			this.Controls.Add(this.lblNames);
 			this.Controls.Add(this.txtPlayer1);
 			this.Controls.Add(this.txtPlayer2);
@@ -902,6 +931,8 @@
 		private System.Windows.Forms.TextBox txtPlayer2;
 		private System.Windows.Forms.TextBox txtPlayer1;
 		private System.Windows.Forms.Label lblNames;
+		private System.Windows.Forms.Label lblPlayer1;
+		private System.Windows.Forms.Label lblPlayer2;
 	}
 }
 
