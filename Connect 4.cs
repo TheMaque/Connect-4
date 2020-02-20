@@ -31,7 +31,8 @@ namespace Connect_4
 		int turn_count;
 		int Turns = 0;
 		bool playerTurn = true;
-		int[,] Connect4Grid = new int [6,7];
+		string[,] Connect4Grid = new string [6,7];
+		Diagnostics diagWindow;
 
 		private void ButtonClicked(object sender, EventArgs e)
 		{
@@ -121,6 +122,13 @@ namespace Connect_4
 			Diagnostics diagWindow = new Diagnostics();
 
 			diagWindow.Show();
+
+			diagWindow.StartPosition = FormStartPosition.Manual;
+			diagWindow.Location = new Point(this.Location.X - 475, this.Location.Y);
+
+			// display the current contents of the array
+			diagWindow.DisplayArray(Connect4Grid);
 		}
+
 	}
 }

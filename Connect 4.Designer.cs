@@ -78,6 +78,9 @@
 			this.picBox39 = new System.Windows.Forms.PictureBox();
 			this.picBox36 = new System.Windows.Forms.PictureBox();
 			this.lblTurn = new System.Windows.Forms.Label();
+			this.txtPlayer2 = new System.Windows.Forms.TextBox();
+			this.txtPlayer1 = new System.Windows.Forms.TextBox();
+			this.lblNames = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -744,11 +747,37 @@
 			this.lblTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTurn.ForeColor = System.Drawing.Color.White;
-			this.lblTurn.Location = new System.Drawing.Point(21, 298);
+			this.lblTurn.Location = new System.Drawing.Point(22, 354);
 			this.lblTurn.Name = "lblTurn";
 			this.lblTurn.Size = new System.Drawing.Size(99, 18);
 			this.lblTurn.TabIndex = 6;
 			this.lblTurn.Text = "Player 1\'s Turn";
+			// 
+			// txtPlayer2
+			// 
+			this.txtPlayer2.Location = new System.Drawing.Point(22, 302);
+			this.txtPlayer2.Name = "txtPlayer2";
+			this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
+			this.txtPlayer2.TabIndex = 33;
+			// 
+			// txtPlayer1
+			// 
+			this.txtPlayer1.Location = new System.Drawing.Point(22, 252);
+			this.txtPlayer1.Name = "txtPlayer1";
+			this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
+			this.txtPlayer1.TabIndex = 34;
+			// 
+			// lblNames
+			// 
+			this.lblNames.AutoSize = true;
+			this.lblNames.BackColor = System.Drawing.Color.DimGray;
+			this.lblNames.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblNames.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblNames.Location = new System.Drawing.Point(19, 217);
+			this.lblNames.Name = "lblNames";
+			this.lblNames.Size = new System.Drawing.Size(45, 15);
+			this.lblNames.TabIndex = 35;
+			this.lblNames.Text = "Names:";
 			// 
 			// Connect4
 			// 
@@ -756,6 +785,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
+			this.Controls.Add(this.lblNames);
+			this.Controls.Add(this.txtPlayer1);
+			this.Controls.Add(this.txtPlayer2);
 			this.Controls.Add(this.msStrip);
 			this.Controls.Add(this.grpGameBoard);
 			this.Controls.Add(this.picLogo);
@@ -867,6 +899,9 @@
 		private System.Windows.Forms.PictureBox picBox36;
 		private System.Windows.Forms.Label lblTurn;
 		private System.Windows.Forms.GroupBox grpGameBoard;
+		private System.Windows.Forms.TextBox txtPlayer2;
+		private System.Windows.Forms.TextBox txtPlayer1;
+		private System.Windows.Forms.Label lblNames;
 	}
 }
 

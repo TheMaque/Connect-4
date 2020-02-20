@@ -39,15 +39,16 @@
 			this.txtDisplayWindow.Multiline = true;
 			this.txtDisplayWindow.Name = "txtDisplayWindow";
 			this.txtDisplayWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtDisplayWindow.Size = new System.Drawing.Size(552, 507);
+			this.txtDisplayWindow.Size = new System.Drawing.Size(515, 459);
 			this.txtDisplayWindow.TabIndex = 1;
 			// 
 			// Diagnostics
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(552, 507);
+			this.ClientSize = new System.Drawing.Size(515, 459);
 			this.Controls.Add(this.txtDisplayWindow);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Diagnostics";
 			this.Text = "Diagnostics";
 			this.ResumeLayout(false);
