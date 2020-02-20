@@ -84,7 +84,9 @@
 			this.lblPlayer2 = new System.Windows.Forms.Label();
 			this.lblEnterNames = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnNewGame = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -131,6 +133,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.picBox39)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox36)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// picLogo
@@ -235,6 +238,7 @@
 			this.grpGameBoard.Controls.Add(this.picBox40);
 			this.grpGameBoard.Controls.Add(this.picBox39);
 			this.grpGameBoard.Controls.Add(this.picBox36);
+			this.grpGameBoard.Enabled = false;
 			this.grpGameBoard.Location = new System.Drawing.Point(139, 27);
 			this.grpGameBoard.Name = "grpGameBoard";
 			this.grpGameBoard.Size = new System.Drawing.Size(680, 561);
@@ -752,7 +756,7 @@
 			this.lblTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTurn.ForeColor = System.Drawing.Color.White;
-			this.lblTurn.Location = new System.Drawing.Point(23, 570);
+			this.lblTurn.Location = new System.Drawing.Point(22, 567);
 			this.lblTurn.Name = "lblTurn";
 			this.lblTurn.Size = new System.Drawing.Size(99, 18);
 			this.lblTurn.TabIndex = 6;
@@ -766,6 +770,7 @@
 			this.txtPlayer2.Name = "txtPlayer2";
 			this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
 			this.txtPlayer2.TabIndex = 1;
+			this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
 			// 
 			// txtPlayer1
 			// 
@@ -775,6 +780,7 @@
 			this.txtPlayer1.Name = "txtPlayer1";
 			this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
 			this.txtPlayer1.TabIndex = 0;
+			this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
 			// 
 			// lblPlayer1
 			// 
@@ -826,18 +832,42 @@
 			this.pictureBox1.TabIndex = 39;
 			this.pictureBox1.TabStop = false;
 			// 
-			// btnNewGame
+			// label1
 			// 
-			this.btnNewGame.BackColor = System.Drawing.Color.DimGray;
-			this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnNewGame.ForeColor = System.Drawing.SystemColors.Control;
-			this.btnNewGame.Location = new System.Drawing.Point(22, 474);
-			this.btnNewGame.Name = "btnNewGame";
-			this.btnNewGame.Size = new System.Drawing.Size(99, 41);
-			this.btnNewGame.TabIndex = 40;
-			this.btnNewGame.Text = "New Game";
-			this.btnNewGame.UseVisualStyleBackColor = false;
+			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.Color.Transparent;
+			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.SystemColors.Control;
+			this.label1.Location = new System.Drawing.Point(37, 439);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(67, 17);
+			this.label1.TabIndex = 40;
+			this.label1.Text = "Press Tab.";
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox2.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
+			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.pictureBox2.Location = new System.Drawing.Point(41, 392);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(56, 38);
+			this.pictureBox2.TabIndex = 41;
+			this.pictureBox2.TabStop = false;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.SystemColors.Control;
+			this.label2.Location = new System.Drawing.Point(37, 299);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(67, 17);
+			this.label2.TabIndex = 42;
+			this.label2.Text = "Press Tab.";
 			// 
 			// Connect4
 			// 
@@ -845,7 +875,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
-			this.Controls.Add(this.btnNewGame);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.pictureBox2);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.lblEnterNames);
 			this.Controls.Add(this.lblPlayer2);
@@ -908,6 +940,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.picBox39)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox36)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -970,7 +1003,9 @@
 		private System.Windows.Forms.Label lblPlayer2;
 		private System.Windows.Forms.Label lblEnterNames;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Button btnNewGame;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.Label label2;
 	}
 }
 

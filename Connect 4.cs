@@ -70,11 +70,19 @@ namespace Connect_4
 		}
 
 		// Procedure for enabling or disabling a picture box to be clicked or whe  game is reset
-		private void MassSetPictureBoxEnable(bool howToSet)
+		private void MassSetPictureBoxEnable(bool SetEnabled)
 		{
 			foreach (Control controlUsed in Controls["grpGameBoard"].Controls)
 			{
-				if (controlUsed is PictureBox) controlUsed.Enabled = howToSet;
+				if (controlUsed is PictureBox) controlUsed.Enabled = SetEnabled;
+			}
+		}
+
+		private void MassSetPictureBoxDisable(bool SetDisable)
+		{
+			foreach (Control controlUsed in Controls["grpGameBoard"].Controls)
+			{
+				if (controlUsed is PictureBox) controlUsed.Enabled = false;
 			}
 		}
 
@@ -107,12 +115,27 @@ namespace Connect_4
 			turn_count = 0;
 		}
 
-
+		private void AllTermsEntered()
+		{
+			if (txtPlayer1.Text != "" && txtPlayer2.Text != "")
+			{
+				grpGameBoard.Enabled = true;
+			}
+			else
+			{
+				grpGameBoard.Enabled = false;
+			}
+		}
 		private void msReset_Click(object sender, EventArgs e)
 		{
 			MassSetPictureBoxEnable(true);
+			MassSetPictureBoxDisable(true);
 			MassSetPictureBoxImage();
 			TurnCountReset();
+
+			txtPlayer1.Text = null;
+			txtPlayer2.Text = null;
+
 			//ClearTheBoardArray();
 
 		}
@@ -123,12 +146,14 @@ namespace Connect_4
 
 			diagWindow.Show();
 
-			diagWindow.StartPosition = FormStartPosition.Manual;
-			diagWindow.Location = new Point(this.Location.X - 475, this.Location.Y);
 
 			// display the current contents of the array
 			diagWindow.DisplayArray(Connect4Grid);
 		}
 
+		private new void Validating(object sender, CancelEventArgs e)
+		{
+			AllTermsEntered();
+		}
 	}
 }
