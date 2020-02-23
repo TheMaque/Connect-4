@@ -84,9 +84,9 @@
 			this.lblPlayer2 = new System.Windows.Forms.Label();
 			this.lblEnterNames = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblPressTab = new System.Windows.Forms.Label();
+			this.lblPressTab2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -756,7 +756,7 @@
 			this.lblTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTurn.ForeColor = System.Drawing.Color.White;
-			this.lblTurn.Location = new System.Drawing.Point(22, 567);
+			this.lblTurn.Location = new System.Drawing.Point(22, 566);
 			this.lblTurn.Name = "lblTurn";
 			this.lblTurn.Size = new System.Drawing.Size(99, 18);
 			this.lblTurn.TabIndex = 6;
@@ -832,19 +832,6 @@
 			this.pictureBox1.TabIndex = 39;
 			this.pictureBox1.TabStop = false;
 			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.Control;
-			this.label1.Location = new System.Drawing.Point(37, 439);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(67, 17);
-			this.label1.TabIndex = 40;
-			this.label1.Text = "Press Tab.";
-			// 
 			// pictureBox2
 			// 
 			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -856,18 +843,31 @@
 			this.pictureBox2.TabIndex = 41;
 			this.pictureBox2.TabStop = false;
 			// 
-			// label2
+			// lblPressTab
 			// 
-			this.label2.AutoSize = true;
-			this.label2.BackColor = System.Drawing.Color.Transparent;
-			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.SystemColors.Control;
-			this.label2.Location = new System.Drawing.Point(37, 299);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(67, 17);
-			this.label2.TabIndex = 42;
-			this.label2.Text = "Press Tab.";
+			this.lblPressTab.AutoSize = true;
+			this.lblPressTab.BackColor = System.Drawing.Color.Transparent;
+			this.lblPressTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPressTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPressTab.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPressTab.Location = new System.Drawing.Point(37, 299);
+			this.lblPressTab.Name = "lblPressTab";
+			this.lblPressTab.Size = new System.Drawing.Size(67, 17);
+			this.lblPressTab.TabIndex = 42;
+			this.lblPressTab.Text = "Press Tab.";
+			// 
+			// lblPressTab2
+			// 
+			this.lblPressTab2.AutoSize = true;
+			this.lblPressTab2.BackColor = System.Drawing.Color.Transparent;
+			this.lblPressTab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPressTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPressTab2.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPressTab2.Location = new System.Drawing.Point(37, 439);
+			this.lblPressTab2.Name = "lblPressTab2";
+			this.lblPressTab2.Size = new System.Drawing.Size(67, 17);
+			this.lblPressTab2.TabIndex = 40;
+			this.lblPressTab2.Text = "Press Tab.";
 			// 
 			// Connect4
 			// 
@@ -875,9 +875,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lblPressTab);
 			this.Controls.Add(this.pictureBox2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblPressTab2);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.lblEnterNames);
 			this.Controls.Add(this.lblPlayer2);
@@ -1003,9 +1003,9 @@
 		private System.Windows.Forms.Label lblPlayer2;
 		private System.Windows.Forms.Label lblEnterNames;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblPressTab;
+		private System.Windows.Forms.Label lblPressTab2;
 	}
 }
 
