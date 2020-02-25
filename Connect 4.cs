@@ -132,11 +132,11 @@ namespace Connect_4
 		{
 			if (txtPlayer1.Text != "" && txtPlayer2.Text != "")
 			{
-				grpGameBoard.Enabled = true;
+				btnStartGame.Enabled = true;
 			}
 			else
 			{
-				grpGameBoard.Enabled = false;
+				btnStartGame.Enabled = false;
 			}
 		}
 		private void msReset_Click(object sender, EventArgs e)
@@ -175,6 +175,11 @@ namespace Connect_4
 		private new void Validating(object sender, CancelEventArgs e)
 		{
 			AllTermsEntered();
+		}
+
+		private void btnStartGame_Click(object sender, EventArgs e)
+		{
+			grpGameBoard.Enabled = true;
 		}
 	}
 }

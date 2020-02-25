@@ -87,6 +87,7 @@
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.lblPressTab = new System.Windows.Forms.Label();
 			this.lblPressTab2 = new System.Windows.Forms.Label();
+			this.btnStartGame = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -177,7 +178,7 @@
 			this.msReset.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.msReset.ForeColor = System.Drawing.SystemColors.Control;
 			this.msReset.Name = "msReset";
-			this.msReset.Size = new System.Drawing.Size(135, 22);
+			this.msReset.Size = new System.Drawing.Size(180, 22);
 			this.msReset.Text = "Reset";
 			this.msReset.Click += new System.EventHandler(this.msReset_Click);
 			// 
@@ -187,13 +188,14 @@
 			this.msDiagnostics.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.msDiagnostics.ForeColor = System.Drawing.SystemColors.Control;
 			this.msDiagnostics.Name = "msDiagnostics";
-			this.msDiagnostics.Size = new System.Drawing.Size(135, 22);
+			this.msDiagnostics.Size = new System.Drawing.Size(180, 22);
 			this.msDiagnostics.Text = "Diagnostics";
 			this.msDiagnostics.Click += new System.EventHandler(this.msDiagnostics_Click);
 			// 
 			// grpGameBoard
 			// 
-			this.grpGameBoard.BackColor = System.Drawing.Color.DimGray;
+			this.grpGameBoard.BackColor = System.Drawing.Color.Transparent;
+			this.grpGameBoard.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_Background;
 			this.grpGameBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.grpGameBoard.Controls.Add(this.picBox7);
 			this.grpGameBoard.Controls.Add(this.picBox6);
@@ -860,13 +862,27 @@
 			this.lblPressTab2.AutoSize = true;
 			this.lblPressTab2.BackColor = System.Drawing.Color.Transparent;
 			this.lblPressTab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblPressTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPressTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPressTab2.ForeColor = System.Drawing.SystemColors.Control;
-			this.lblPressTab2.Location = new System.Drawing.Point(37, 439);
+			this.lblPressTab2.Location = new System.Drawing.Point(8, 450);
 			this.lblPressTab2.Name = "lblPressTab2";
-			this.lblPressTab2.Size = new System.Drawing.Size(67, 17);
+			this.lblPressTab2.Size = new System.Drawing.Size(126, 15);
 			this.lblPressTab2.TabIndex = 40;
-			this.lblPressTab2.Text = "Press Tab.";
+			this.lblPressTab2.Text = "Press Tab, Press Button.";
+			// 
+			// btnStartGame
+			// 
+			this.btnStartGame.BackColor = System.Drawing.Color.DimGray;
+			this.btnStartGame.Enabled = false;
+			this.btnStartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnStartGame.ForeColor = System.Drawing.Color.White;
+			this.btnStartGame.Location = new System.Drawing.Point(22, 491);
+			this.btnStartGame.Name = "btnStartGame";
+			this.btnStartGame.Size = new System.Drawing.Size(99, 42);
+			this.btnStartGame.TabIndex = 43;
+			this.btnStartGame.Text = "Start Game";
+			this.btnStartGame.UseVisualStyleBackColor = false;
+			this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
 			// 
 			// Connect4
 			// 
@@ -874,6 +890,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
+			this.Controls.Add(this.btnStartGame);
 			this.Controls.Add(this.lblPressTab);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.lblPressTab2);
@@ -1005,6 +1022,7 @@
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.Label lblPressTab;
 		private System.Windows.Forms.Label lblPressTab2;
+		private System.Windows.Forms.Button btnStartGame;
 	}
 }
 
