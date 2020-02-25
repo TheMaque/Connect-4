@@ -22,17 +22,28 @@ namespace Connect_4
 
 	public partial class Connect4 : Form
 	{
-		public Connect4()
-		{
-			InitializeComponent();
-		}
-
 		// Global Variables
 		int turn_count;
 		int Turns = 0;
 		bool playerTurn = true;
 		string[,] Connect4Grid = new string [6,7];
 		Diagnostics diagWindow;
+
+		public Connect4()
+		{
+			InitializeComponent();
+		}
+
+		private void ClearTheBoardArray()
+		{
+			for (int row = 0; row < Connect4Grid.GetLength(0); row++)
+			{
+				for (int col = 0; col < Connect4Grid.GetLength(1); col++)
+				{
+					Connect4Grid[row, col] = "-";
+				}
+			}
+		}
 
 		private void ButtonClicked(object sender, EventArgs e)
 		{
@@ -46,6 +57,8 @@ namespace Connect_4
 			button.Image = SetImage();
 
 			button.Enabled = false;
+
+			UpdateTheBoardArray(row, column);
 
 			playerTurn = !playerTurn;
 		}
@@ -132,6 +145,7 @@ namespace Connect_4
 			MassSetPictureBoxDisable(true);
 			MassSetPictureBoxImage();
 			TurnCountReset();
+			ClearTheBoardArray();
 
 			txtPlayer1.Text = null;
 			txtPlayer2.Text = null;
@@ -140,7 +154,12 @@ namespace Connect_4
 
 		}
 
-		private void msDiagnostics_Click(object sender, EventArgs e)
+		private void UpdateTheBoardArray(int rowToUse, int columnToUse)
+		{
+			Connect4Grid[rowToUse, columnToUse] = SetPlayerValue();
+		}
+
+			private void msDiagnostics_Click(object sender, EventArgs e)
 		{
 			Diagnostics diagWindow = new Diagnostics();
 
