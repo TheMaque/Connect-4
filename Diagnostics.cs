@@ -40,7 +40,7 @@ namespace Connect_4
         /// <returns>Formatted output</returns>
         private string DisplayElement(string element)
         {
-            return " " + element + " | ";
+            return " " + element + "  | ";
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Connect_4
         /// <param name="boardArrayToDisplay">Array to display</param>
         public void DisplayArray(string[,] boardArrayToDisplay)
         {
-            string tableLine = "       +---+---+---+---+---+---+---+" + Environment.NewLine;
+            string tableLine = "       +-----+-----+-----+-----+-----+-----+-----+" + Environment.NewLine;
             string arrayContents = tableLine;
 
             for (int row = boardArrayToDisplay.GetLength(0) - 1; row >= 0; row--)
@@ -65,8 +65,8 @@ namespace Connect_4
                 arrayContents += tableLine;
             }
 
-            arrayContents += "         0   1   2   3   4   5   6  " + Environment.NewLine;
-            arrayContents += "        col col col col col col col ";
+            arrayContents += "         0     1     2     3     4     5     6  " + Environment.NewLine;
+            arrayContents += "        col   col   col   col   col   col   col ";
 
             txtDisplayWindow.Text = arrayContents;
             txtDisplayWindow.Select(0, 0);

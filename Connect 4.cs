@@ -27,7 +27,10 @@ namespace Connect_4
 		int Turns = 0;
 		bool playerTurn = true;
 		string[,] Connect4Grid = new string [6,7];
+		
 		Diagnostics diagWindow;
+		bool viewArrayContents = false;
+		bool viewPatternBuild = false;
 
 		public Connect4()
 		{
@@ -156,6 +159,12 @@ namespace Connect_4
 		private void UpdateTheBoardArray(int rowToUse, int columnToUse)
 		{
 			Connect4Grid[rowToUse, columnToUse] = SetPlayerValue();
+
+			if (viewArrayContents)
+			{
+				diagWindow.ClearDisplay();
+		
+			}
 		}
 
 			private void msDiagnostics_Click(object sender, EventArgs e)
