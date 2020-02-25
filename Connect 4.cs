@@ -150,7 +150,6 @@ namespace Connect_4
 			txtPlayer1.Text = null;
 			txtPlayer2.Text = null;
 
-			//ClearTheBoardArray();
 
 		}
 
@@ -164,6 +163,9 @@ namespace Connect_4
 			Diagnostics diagWindow = new Diagnostics();
 
 			diagWindow.Show();
+
+			diagWindow.StartPosition = FormStartPosition.Manual;
+			diagWindow.Location = new Point(this.Location.X - 475, this.Location.Y);
 
 
 			// display the current contents of the array

@@ -193,8 +193,7 @@
 			// 
 			// grpGameBoard
 			// 
-			this.grpGameBoard.BackColor = System.Drawing.Color.Transparent;
-			this.grpGameBoard.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_Background;
+			this.grpGameBoard.BackColor = System.Drawing.Color.DimGray;
 			this.grpGameBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.grpGameBoard.Controls.Add(this.picBox7);
 			this.grpGameBoard.Controls.Add(this.picBox6);
