@@ -26,8 +26,8 @@ namespace Connect_4
 		int turn_count;
 		int Turns = 0;
 		bool playerTurn = true;
-		string[,] Connect4Grid = new string [6,7];
-		
+		string[,] Connect4Grid = new string[6, 7];
+
 		Diagnostics diagWindow;
 		bool viewArrayContents = false;
 		bool viewPatternBuild = false;
@@ -63,6 +63,7 @@ namespace Connect_4
 
 			UpdateTheBoardArray(row, column);
 
+			\
 
 			playerTurn = !playerTurn;
 		}
@@ -95,14 +96,6 @@ namespace Connect_4
 			}
 		}
 
-		private void MassSetPictureBoxDisable(bool SetDisable)
-		{
-			foreach (Control controlUsed in Controls["grpGameBoard"].Controls)
-			{
-				if (controlUsed is PictureBox) controlUsed.Enabled = false;
-			}
-		}
-
 		// Procedure for clearing of picture boxes when game is reset
 		private void MassSetPictureBoxImage()
 		{
@@ -115,7 +108,7 @@ namespace Connect_4
 			}
 
 		}
-		
+
 		/// <summary>
 		/// Based on player turn determines the value to be placed in the array 
 		/// </summary>
@@ -143,10 +136,10 @@ namespace Connect_4
 				btnStartGame.Enabled = false;
 			}
 		}
+
 		private void msReset_Click(object sender, EventArgs e)
 		{
 			MassSetPictureBoxEnable(true);
-			//MassSetPictureBoxDisable(true);
 			MassSetPictureBoxImage();
 			TurnCountReset();
 			ClearTheBoardArray();
@@ -158,7 +151,49 @@ namespace Connect_4
 
 			btnStartGame.Enabled = false;
 
+		}
 
+
+		//private void SetEnableProperty(bool howToSet)
+		//{
+		//	foreach (Control controlUsed in Controls["grpGameBoard}"].Controls)
+		//	{
+		//		if (controlUsed is PictureBox)
+		//			if (controlUsed.Tag == "(0,0)")
+		//			{
+		//				PictureBox picturetodown = (PictureBox)controlUsed;
+		//			}
+		//	}
+
+		//}
+
+		private int GetDropToRow(int columnClickedIn)
+		{
+			int row = 0;
+
+			for (row = 0; row < Connect4Grid.GetLength(1); row++)
+			{
+				if (Connect4Grid[row, columnClickedIn] == "-")
+				{
+					break;
+				}
+			}
+
+			return row;
+		}
+
+		private int DropTheCoin(int column)
+		{
+			int rowToPlaceCoinIn = GetDropToRow(column);
+
+			string nameOfPictureBox = "btn" + rowToPlaceCoinIn + column;
+
+			PictureBox pictureBoxforCoin = (PictureBox)Controls["grpGameBoard"].Controls[nameOfPictureBox];
+
+			pictureBoxforCoin.Image = SetImage();
+			pictureBoxforCoin.Enabled = true;
+
+			return rowToPlaceCoinIn;
 		}
 
 		private void UpdateTheBoardArray(int rowToUse, int columnToUse)
@@ -183,8 +218,6 @@ namespace Connect_4
 			diagWindow.Location = new Point(this.Location.X - 538, this.Location.Y);
 
 			viewArrayContents = true;
-
-
 
 			// display the current contents of the array
 			diagWindow.DisplayArray(Connect4Grid);
