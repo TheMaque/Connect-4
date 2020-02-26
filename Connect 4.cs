@@ -63,6 +63,7 @@ namespace Connect_4
 
 			UpdateTheBoardArray(row, column);
 
+
 			playerTurn = !playerTurn;
 		}
 
@@ -145,13 +146,15 @@ namespace Connect_4
 		private void msReset_Click(object sender, EventArgs e)
 		{
 			MassSetPictureBoxEnable(true);
-			MassSetPictureBoxDisable(true);
+			//MassSetPictureBoxDisable(true);
 			MassSetPictureBoxImage();
 			TurnCountReset();
 			ClearTheBoardArray();
 
 			txtPlayer1.Text = null;
 			txtPlayer2.Text = null;
+
+			btnStartGame.Enabled = false;
 
 
 		}
@@ -163,18 +166,22 @@ namespace Connect_4
 			if (viewArrayContents)
 			{
 				diagWindow.ClearDisplay();
+				diagWindow.DisplayArray(Connect4Grid);
 		
 			}
 		}
 
 			private void msDiagnostics_Click(object sender, EventArgs e)
 		{
-			Diagnostics diagWindow = new Diagnostics();
+			diagWindow = new Diagnostics();
 
 			diagWindow.Show();
 
 			diagWindow.StartPosition = FormStartPosition.Manual;
 			diagWindow.Location = new Point(this.Location.X - 475, this.Location.Y);
+
+			viewArrayContents = true;
+
 
 
 			// display the current contents of the array
@@ -189,6 +196,11 @@ namespace Connect_4
 		private void btnStartGame_Click(object sender, EventArgs e)
 		{
 			grpGameBoard.Enabled = true;
+		}
+
+		private void Connect4_Load(object sender, EventArgs e)
+		{
+			ClearTheBoardArray();
 		}
 	}
 }
