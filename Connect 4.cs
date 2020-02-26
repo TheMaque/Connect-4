@@ -151,6 +151,8 @@ namespace Connect_4
 			TurnCountReset();
 			ClearTheBoardArray();
 
+			grpGameBoard.Enabled = false;
+
 			txtPlayer1.Text = null;
 			txtPlayer2.Text = null;
 
@@ -178,7 +180,7 @@ namespace Connect_4
 			diagWindow.Show();
 
 			diagWindow.StartPosition = FormStartPosition.Manual;
-			diagWindow.Location = new Point(this.Location.X - 475, this.Location.Y);
+			diagWindow.Location = new Point(this.Location.X - 538, this.Location.Y);
 
 			viewArrayContents = true;
 
