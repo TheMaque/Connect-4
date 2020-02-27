@@ -63,24 +63,11 @@ namespace Connect_4
 
 			UpdateTheBoardArray(row, column);
 
-			\
+			PlayerID();
+
 
 			playerTurn = !playerTurn;
 		}
-
-		/// <summary>
-		/// This method clears the Game Board Array in preparation for a new game
-		/// </summary>
-		//private void ClearTheBoardArray()
-		//{
-		//	for (int row = 0; row < Connect4Grid.GetLength(0); row++)
-		//	{
-		//		for (int col = 0; col < Connect4Grid.GetLength(1); col++)
-		//		{
-		//		 Connect4Grid[row, col] = "-";
-		//		}
-		//	}
-		//}
 
 		private Bitmap SetImage()
 		{
@@ -151,8 +138,8 @@ namespace Connect_4
 
 			btnStartGame.Enabled = false;
 
+			Turns = 0;
 		}
-
 
 		//private void SetEnableProperty(bool howToSet)
 		//{
@@ -208,6 +195,17 @@ namespace Connect_4
 			}
 		}
 
+		private void PlayerID()
+		{
+			if (playerTurn)
+			{
+				lblTurn.Text = txtPlayer1.Text;
+			}
+			else
+			{
+				lblTurn.Text = txtPlayer2.Text;
+			}
+		}
 			private void msDiagnostics_Click(object sender, EventArgs e)
 		{
 			diagWindow = new Diagnostics();
@@ -232,6 +230,7 @@ namespace Connect_4
 		{
 			grpGameBoard.Enabled = true;
 		}
+
 
 		private void Connect4_Load(object sender, EventArgs e)
 		{

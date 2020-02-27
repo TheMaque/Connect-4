@@ -88,6 +88,7 @@
 			this.lblPressTab = new System.Windows.Forms.Label();
 			this.lblPressTab2 = new System.Windows.Forms.Label();
 			this.btnStartGame = new System.Windows.Forms.Button();
+			this.lblPlayerTurn = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -757,17 +758,16 @@
 			this.lblTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTurn.ForeColor = System.Drawing.Color.White;
-			this.lblTurn.Location = new System.Drawing.Point(22, 566);
+			this.lblTurn.Location = new System.Drawing.Point(45, 570);
 			this.lblTurn.Name = "lblTurn";
-			this.lblTurn.Size = new System.Drawing.Size(99, 18);
+			this.lblTurn.Size = new System.Drawing.Size(2, 18);
 			this.lblTurn.TabIndex = 6;
-			this.lblTurn.Text = "Player 1\'s Turn";
 			// 
 			// txtPlayer2
 			// 
 			this.txtPlayer2.BackColor = System.Drawing.Color.DarkGray;
 			this.txtPlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPlayer2.Location = new System.Drawing.Point(22, 366);
+			this.txtPlayer2.Location = new System.Drawing.Point(21, 253);
 			this.txtPlayer2.Name = "txtPlayer2";
 			this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
 			this.txtPlayer2.TabIndex = 1;
@@ -777,7 +777,7 @@
 			// 
 			this.txtPlayer1.BackColor = System.Drawing.Color.DarkGray;
 			this.txtPlayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPlayer1.Location = new System.Drawing.Point(22, 252);
+			this.txtPlayer1.Location = new System.Drawing.Point(21, 366);
 			this.txtPlayer1.Name = "txtPlayer1";
 			this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
 			this.txtPlayer1.TabIndex = 0;
@@ -884,12 +884,26 @@
 			this.btnStartGame.UseVisualStyleBackColor = false;
 			this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
 			// 
+			// lblPlayerTurn
+			// 
+			this.lblPlayerTurn.AutoSize = true;
+			this.lblPlayerTurn.BackColor = System.Drawing.Color.Transparent;
+			this.lblPlayerTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPlayerTurn.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPlayerTurn.Location = new System.Drawing.Point(37, 545);
+			this.lblPlayerTurn.Name = "lblPlayerTurn";
+			this.lblPlayerTurn.Size = new System.Drawing.Size(71, 15);
+			this.lblPlayerTurn.TabIndex = 44;
+			this.lblPlayerTurn.Text = "Players Turn:";
+			// 
 			// Connect4
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
+			this.Controls.Add(this.lblPlayerTurn);
 			this.Controls.Add(this.btnStartGame);
 			this.Controls.Add(this.lblPressTab);
 			this.Controls.Add(this.pictureBox2);
@@ -1025,6 +1039,7 @@
 		private System.Windows.Forms.Label lblPressTab;
 		private System.Windows.Forms.Label lblPressTab2;
 		private System.Windows.Forms.Button btnStartGame;
+		private System.Windows.Forms.Label lblPlayerTurn;
 	}
 }
 
