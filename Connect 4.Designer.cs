@@ -157,7 +157,7 @@
 			this.msStrip.Location = new System.Drawing.Point(0, 0);
 			this.msStrip.Name = "msStrip";
 			this.msStrip.Size = new System.Drawing.Size(840, 24);
-			this.msStrip.TabIndex = 2;
+			this.msStrip.TabIndex = 3;
 			// 
 			// msOptions
 			// 
@@ -770,7 +770,7 @@
 			this.txtPlayer2.Location = new System.Drawing.Point(21, 253);
 			this.txtPlayer2.Name = "txtPlayer2";
 			this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
-			this.txtPlayer2.TabIndex = 1;
+			this.txtPlayer2.TabIndex = 0;
 			this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
 			// 
 			// txtPlayer1
@@ -780,7 +780,7 @@
 			this.txtPlayer1.Location = new System.Drawing.Point(21, 366);
 			this.txtPlayer1.Name = "txtPlayer1";
 			this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
-			this.txtPlayer1.TabIndex = 0;
+			this.txtPlayer1.TabIndex = 1;
 			this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
 			// 
 			// lblPlayer1
@@ -879,7 +879,7 @@
 			this.btnStartGame.Location = new System.Drawing.Point(22, 491);
 			this.btnStartGame.Name = "btnStartGame";
 			this.btnStartGame.Size = new System.Drawing.Size(99, 42);
-			this.btnStartGame.TabIndex = 43;
+			this.btnStartGame.TabIndex = 2;
 			this.btnStartGame.Text = "Start Game";
 			this.btnStartGame.UseVisualStyleBackColor = false;
 			this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);

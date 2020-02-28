@@ -64,28 +64,33 @@ namespace Connect_4
 			PictureBox button = (PictureBox)sender;
 
 			// Set string to find tag in picture box
-			int row = int.Parse(button.Tag.ToString().Substring(1, 1));
-			int column = int.Parse(button.Tag.ToString().Substring(3, 1));
+			 row = int.Parse(button.Tag.ToString().Substring(1, 1));
+			 column = int.Parse(button.Tag.ToString().Substring(3, 1));
 
-			button.Image = SetImage();
-
-			button.Enabled = false;
+			row = DropTheCoin(column);
 
 			UpdateTheBoardArray(row, column);
 
-			PlayerID();
+
 
 			if (CheckWinner())
 			{
-				// Announce Winner
+				// announce winner
 				ResetBoard("Disable");
+				MessageBox.Show("There is a winner");
+				grpGameBoard.Enabled = false;
 			}
 			else
 			{
 				playerTurn = !playerTurn;
+				PlayerID();
+				
+			
 			}
 
-			playerTurn = !playerTurn;
+		
+			
+
 		}
 
 		private Bitmap SetImage()
@@ -146,9 +151,9 @@ namespace Connect_4
 		{
 			string pattern = "";
 
-			for (int columnIndex = 0; columnIndex < Connect4Grid.GetLength(1); columnIndex++)
+			for (int rowIndex = 0; rowIndex < Connect4Grid.GetLength(0); rowIndex++)
 			{
-				pattern += Connect4Grid[row, columnIndex];
+				pattern += Connect4Grid[rowIndex, column];
 			}
 			if (viewPatternBuild)
 			{
@@ -160,7 +165,18 @@ namespace Connect_4
 
 		private string GenerateRowPattern()
 		{
-			return "";
+			string pattern = "";
+
+			for (int columnIndex = 0; columnIndex < Connect4Grid.GetLength(1); columnIndex++)
+			{
+				pattern += Connect4Grid[row, columnIndex];
+			}
+			if (viewPatternBuild)
+			{
+				diagWindow.DisplayLine("Row Pattern: " + pattern);
+			}
+
+			return pattern;
 		}
 
 		private string GenerateDiagonal1Pattern()
@@ -215,7 +231,7 @@ namespace Connect_4
 			string rowPattern = GenerateRowPattern();
 			string columnPattern = GenerateColumnPattern();
 			string diagonal1Pattern = GenerateDiagonal1Pattern();
-			string diagonal2Pattern = GenerateDiagonal2Pattern();
+			//string diagonal2Pattern = GenerateDiagonal2Pattern();
 
 			if (rowPattern.Contains("WWWW") || rowPattern.Contains("RRRR"))
 			{
@@ -229,10 +245,10 @@ namespace Connect_4
 			{
 				return true;
 			}
-			else if (diagonal2Pattern.Contains("WWWW") || diagonal2Pattern.Contains("RRRR"))
-			{
-				return true;
-			}
+			//else if (diagonal2Pattern.Contains("WWWW") || diagonal2Pattern.Contains("RRRR"))
+			//{
+			//	return true;
+			//}
 			else
 			{
 				return false;
@@ -263,7 +279,7 @@ namespace Connect_4
 		{
 			typeOfReset = typeOfReset.ToUpper();
 
-			grpGameBoard.Enabled = true;
+			grpGameBoard.Enabled = false;
 
 			foreach (Control buttonControl in Controls["grpGameBoard"].Controls)
 			{
@@ -311,18 +327,6 @@ namespace Connect_4
 			Turns = 0;
 		}
 
-		//private void SetEnableProperty(bool howToSet)
-		//{
-		//	foreach (Control controlUsed in Controls["grpGameBoard}"].Controls)
-		//	{
-		//		if (controlUsed is PictureBox)
-		//			if (controlUsed.Tag == "(0,0)")
-		//			{
-		//				PictureBox picturetodown = (PictureBox)controlUsed;
-		//			}
-		//	}
-
-		//}
 
 		/// <summary>
 		/// This method drops the corresponding coin in the row that the user picked.
@@ -353,12 +357,21 @@ namespace Connect_4
 		{
 			int rowToPlaceCoinIn = GetDropToRow(column);
 
-			string nameOfPictureBox = "btn" + rowToPlaceCoinIn + column;
+			string nameOfTag = "(" + rowToPlaceCoinIn + "," + column + ")";
 
-			PictureBox pictureBoxforCoin = (PictureBox)Controls["grpGameBoard"].Controls[nameOfPictureBox];
+			foreach (Control controlUsed in Controls["grpGameBoard"].Controls)
+			{
+				if (controlUsed is PictureBox)
+				{
+					PictureBox placeCoinHere = (PictureBox)controlUsed;
 
-			pictureBoxforCoin.Image = SetImage();
-			pictureBoxforCoin.Enabled = true;
+					if (placeCoinHere.Tag.ToString() == nameOfTag)
+					{ 
+						placeCoinHere.Image = SetImage();
+						placeCoinHere.Enabled = true;
+					}
+				}
+			}
 
 			return rowToPlaceCoinIn;
 		}
@@ -377,7 +390,7 @@ namespace Connect_4
 			{
 				diagWindow.ClearDisplay();
 				diagWindow.DisplayArray(Connect4Grid);
-		
+
 			}
 		}
 
