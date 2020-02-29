@@ -84,14 +84,14 @@
 			this.lblPlayer2 = new System.Windows.Forms.Label();
 			this.lblEnterNames = new System.Windows.Forms.Label();
 			this.picBoxArrow1 = new System.Windows.Forms.PictureBox();
-			this.picBoxArrow2 = new System.Windows.Forms.PictureBox();
-			this.lblPressTab = new System.Windows.Forms.Label();
 			this.lblPressTab2 = new System.Windows.Forms.Label();
 			this.btnStartGame = new System.Windows.Forms.Button();
 			this.lblPlayerTurn = new System.Windows.Forms.Label();
-			this.picBoxArrow3 = new System.Windows.Forms.PictureBox();
 			this.picBoxRed = new System.Windows.Forms.PictureBox();
 			this.picBoxWhite = new System.Windows.Forms.PictureBox();
+			this.lblPressTab = new System.Windows.Forms.Label();
+			this.lblPlayer2Coins = new System.Windows.Forms.Label();
+			this.lblPlayer1Coins = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -138,8 +138,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.picBox39)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox36)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBoxRed)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBoxWhite)).BeginInit();
 			this.SuspendLayout();
@@ -836,33 +834,9 @@
 			this.picBoxArrow1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.picBoxArrow1.Location = new System.Drawing.Point(41, 175);
 			this.picBoxArrow1.Name = "picBoxArrow1";
-			this.picBoxArrow1.Size = new System.Drawing.Size(56, 38);
+			this.picBoxArrow1.Size = new System.Drawing.Size(55, 38);
 			this.picBoxArrow1.TabIndex = 39;
 			this.picBoxArrow1.TabStop = false;
-			// 
-			// picBoxArrow2
-			// 
-			this.picBoxArrow2.BackColor = System.Drawing.Color.Transparent;
-			this.picBoxArrow2.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
-			this.picBoxArrow2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.picBoxArrow2.Location = new System.Drawing.Point(41, 392);
-			this.picBoxArrow2.Name = "picBoxArrow2";
-			this.picBoxArrow2.Size = new System.Drawing.Size(56, 38);
-			this.picBoxArrow2.TabIndex = 41;
-			this.picBoxArrow2.TabStop = false;
-			// 
-			// lblPressTab
-			// 
-			this.lblPressTab.AutoSize = true;
-			this.lblPressTab.BackColor = System.Drawing.Color.Transparent;
-			this.lblPressTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblPressTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPressTab.ForeColor = System.Drawing.SystemColors.Control;
-			this.lblPressTab.Location = new System.Drawing.Point(37, 299);
-			this.lblPressTab.Name = "lblPressTab";
-			this.lblPressTab.Size = new System.Drawing.Size(67, 17);
-			this.lblPressTab.TabIndex = 42;
-			this.lblPressTab.Text = "Press Tab.";
 			// 
 			// lblPressTab2
 			// 
@@ -871,7 +845,7 @@
 			this.lblPressTab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblPressTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPressTab2.ForeColor = System.Drawing.SystemColors.Control;
-			this.lblPressTab2.Location = new System.Drawing.Point(8, 444);
+			this.lblPressTab2.Location = new System.Drawing.Point(8, 427);
 			this.lblPressTab2.Name = "lblPressTab2";
 			this.lblPressTab2.Size = new System.Drawing.Size(126, 15);
 			this.lblPressTab2.TabIndex = 40;
@@ -883,7 +857,7 @@
 			this.btnStartGame.Enabled = false;
 			this.btnStartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnStartGame.ForeColor = System.Drawing.Color.White;
-			this.btnStartGame.Location = new System.Drawing.Point(22, 491);
+			this.btnStartGame.Location = new System.Drawing.Point(21, 474);
 			this.btnStartGame.Name = "btnStartGame";
 			this.btnStartGame.Size = new System.Drawing.Size(99, 42);
 			this.btnStartGame.TabIndex = 3;
@@ -898,22 +872,11 @@
 			this.lblPlayerTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPlayerTurn.ForeColor = System.Drawing.SystemColors.Control;
-			this.lblPlayerTurn.Location = new System.Drawing.Point(37, 545);
+			this.lblPlayerTurn.Location = new System.Drawing.Point(37, 536);
 			this.lblPlayerTurn.Name = "lblPlayerTurn";
 			this.lblPlayerTurn.Size = new System.Drawing.Size(71, 15);
 			this.lblPlayerTurn.TabIndex = 44;
 			this.lblPlayerTurn.Text = "Players Turn:";
-			// 
-			// picBoxArrow3
-			// 
-			this.picBoxArrow3.BackColor = System.Drawing.Color.Transparent;
-			this.picBoxArrow3.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
-			this.picBoxArrow3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.picBoxArrow3.Location = new System.Drawing.Point(59, 468);
-			this.picBoxArrow3.Name = "picBoxArrow3";
-			this.picBoxArrow3.Size = new System.Drawing.Size(22, 20);
-			this.picBoxArrow3.TabIndex = 45;
-			this.picBoxArrow3.TabStop = false;
 			// 
 			// picBoxRed
 			// 
@@ -939,19 +902,56 @@
 			this.picBoxWhite.TabIndex = 47;
 			this.picBoxWhite.TabStop = false;
 			// 
+			// lblPressTab
+			// 
+			this.lblPressTab.AutoSize = true;
+			this.lblPressTab.BackColor = System.Drawing.Color.Transparent;
+			this.lblPressTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPressTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPressTab.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPressTab.Location = new System.Drawing.Point(37, 299);
+			this.lblPressTab.Name = "lblPressTab";
+			this.lblPressTab.Size = new System.Drawing.Size(67, 17);
+			this.lblPressTab.TabIndex = 42;
+			this.lblPressTab.Text = "Press Tab.";
+			// 
+			// lblPlayer2Coins
+			// 
+			this.lblPlayer2Coins.AutoSize = true;
+			this.lblPlayer2Coins.BackColor = System.Drawing.Color.Transparent;
+			this.lblPlayer2Coins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPlayer2Coins.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPlayer2Coins.Location = new System.Drawing.Point(26, 389);
+			this.lblPlayer2Coins.Name = "lblPlayer2Coins";
+			this.lblPlayer2Coins.Size = new System.Drawing.Size(88, 15);
+			this.lblPlayer2Coins.TabIndex = 49;
+			this.lblPlayer2Coins.Text = "Player 2 Coins:";
+			// 
+			// lblPlayer1Coins
+			// 
+			this.lblPlayer1Coins.AutoSize = true;
+			this.lblPlayer1Coins.BackColor = System.Drawing.Color.Transparent;
+			this.lblPlayer1Coins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPlayer1Coins.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPlayer1Coins.Location = new System.Drawing.Point(20, 275);
+			this.lblPlayer1Coins.Name = "lblPlayer1Coins";
+			this.lblPlayer1Coins.Size = new System.Drawing.Size(88, 15);
+			this.lblPlayer1Coins.TabIndex = 48;
+			this.lblPlayer1Coins.Text = "Player 1 Coins:";
+			// 
 			// Connect4
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
+			this.Controls.Add(this.lblPlayer2Coins);
+			this.Controls.Add(this.lblPlayer1Coins);
 			this.Controls.Add(this.picBoxWhite);
 			this.Controls.Add(this.picBoxRed);
-			this.Controls.Add(this.picBoxArrow3);
 			this.Controls.Add(this.lblPlayerTurn);
 			this.Controls.Add(this.btnStartGame);
 			this.Controls.Add(this.lblPressTab);
-			this.Controls.Add(this.picBoxArrow2);
 			this.Controls.Add(this.lblPressTab2);
 			this.Controls.Add(this.picBoxArrow1);
 			this.Controls.Add(this.lblEnterNames);
@@ -1017,8 +1017,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.picBox39)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox36)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBoxRed)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBoxWhite)).EndInit();
 			this.ResumeLayout(false);
@@ -1083,14 +1081,14 @@
 		private System.Windows.Forms.Label lblPlayer2;
 		private System.Windows.Forms.Label lblEnterNames;
 		private System.Windows.Forms.PictureBox picBoxArrow1;
-		private System.Windows.Forms.PictureBox picBoxArrow2;
-		private System.Windows.Forms.Label lblPressTab;
 		private System.Windows.Forms.Label lblPressTab2;
 		private System.Windows.Forms.Button btnStartGame;
 		private System.Windows.Forms.Label lblPlayerTurn;
-		private System.Windows.Forms.PictureBox picBoxArrow3;
 		private System.Windows.Forms.PictureBox picBoxRed;
 		private System.Windows.Forms.PictureBox picBoxWhite;
+		private System.Windows.Forms.Label lblPressTab;
+		private System.Windows.Forms.Label lblPlayer2Coins;
+		private System.Windows.Forms.Label lblPlayer1Coins;
 	}
 }
 

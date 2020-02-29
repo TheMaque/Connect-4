@@ -78,10 +78,11 @@ namespace Connect_4
 				ResetBoard("Disable");
 				MessageBox.Show(lblTurn.Text + " has won the game!", "Congrats,  we have a winner!");
 				grpGameBoard.Enabled = false;
+				btnStartGame.Enabled = false;
 			}
 			else if (Turns == 27)
 			{
-				MessageBox.Show("The 28 turns have been exceeded there has been a draw. Click options and reset!", "Oops.");
+				MessageBox.Show("All coins have been used,  there has been a draw. Click options and reset!", "Yikes, yall suck...");
 				grpGameBoard.Enabled = false;
 				btnStartGame.Enabled = false;
 			}
