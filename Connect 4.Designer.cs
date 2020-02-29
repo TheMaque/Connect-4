@@ -83,12 +83,15 @@
 			this.lblPlayer1 = new System.Windows.Forms.Label();
 			this.lblPlayer2 = new System.Windows.Forms.Label();
 			this.lblEnterNames = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.picBoxArrow1 = new System.Windows.Forms.PictureBox();
+			this.picBoxArrow2 = new System.Windows.Forms.PictureBox();
 			this.lblPressTab = new System.Windows.Forms.Label();
 			this.lblPressTab2 = new System.Windows.Forms.Label();
 			this.btnStartGame = new System.Windows.Forms.Button();
 			this.lblPlayerTurn = new System.Windows.Forms.Label();
+			this.picBoxArrow3 = new System.Windows.Forms.PictureBox();
+			this.picBoxRed = new System.Windows.Forms.PictureBox();
+			this.picBoxWhite = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
 			this.msStrip.SuspendLayout();
 			this.grpGameBoard.SuspendLayout();
@@ -134,8 +137,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.picBox40)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox39)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox36)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxRed)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxWhite)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// picLogo
@@ -753,34 +759,35 @@
 			// 
 			// lblTurn
 			// 
-			this.lblTurn.AutoSize = true;
 			this.lblTurn.BackColor = System.Drawing.Color.DimGray;
 			this.lblTurn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblTurn.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTurn.ForeColor = System.Drawing.Color.White;
-			this.lblTurn.Location = new System.Drawing.Point(45, 570);
+			this.lblTurn.Location = new System.Drawing.Point(34, 570);
 			this.lblTurn.Name = "lblTurn";
-			this.lblTurn.Size = new System.Drawing.Size(2, 18);
+			this.lblTurn.Size = new System.Drawing.Size(74, 18);
 			this.lblTurn.TabIndex = 6;
+			this.lblTurn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// txtPlayer2
 			// 
 			this.txtPlayer2.BackColor = System.Drawing.Color.DarkGray;
 			this.txtPlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPlayer2.Location = new System.Drawing.Point(21, 253);
+			this.txtPlayer2.Location = new System.Drawing.Point(21, 366);
 			this.txtPlayer2.Name = "txtPlayer2";
 			this.txtPlayer2.Size = new System.Drawing.Size(100, 20);
-			this.txtPlayer2.TabIndex = 0;
+			this.txtPlayer2.TabIndex = 1;
 			this.txtPlayer2.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
 			// 
 			// txtPlayer1
 			// 
 			this.txtPlayer1.BackColor = System.Drawing.Color.DarkGray;
 			this.txtPlayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPlayer1.Location = new System.Drawing.Point(21, 366);
+			this.txtPlayer1.Location = new System.Drawing.Point(21, 252);
 			this.txtPlayer1.Name = "txtPlayer1";
 			this.txtPlayer1.Size = new System.Drawing.Size(100, 20);
-			this.txtPlayer1.TabIndex = 1;
+			this.txtPlayer1.TabIndex = 0;
 			this.txtPlayer1.Validating += new System.ComponentModel.CancelEventHandler(this.Validating);
 			// 
 			// lblPlayer1
@@ -822,27 +829,27 @@
 			this.lblEnterNames.TabIndex = 38;
 			this.lblEnterNames.Text = "Enter Player Names:";
 			// 
-			// pictureBox1
+			// picBoxArrow1
 			// 
-			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox1.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
-			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox1.Location = new System.Drawing.Point(41, 175);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(56, 38);
-			this.pictureBox1.TabIndex = 39;
-			this.pictureBox1.TabStop = false;
+			this.picBoxArrow1.BackColor = System.Drawing.Color.Transparent;
+			this.picBoxArrow1.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
+			this.picBoxArrow1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.picBoxArrow1.Location = new System.Drawing.Point(41, 175);
+			this.picBoxArrow1.Name = "picBoxArrow1";
+			this.picBoxArrow1.Size = new System.Drawing.Size(56, 38);
+			this.picBoxArrow1.TabIndex = 39;
+			this.picBoxArrow1.TabStop = false;
 			// 
-			// pictureBox2
+			// picBoxArrow2
 			// 
-			this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox2.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
-			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.pictureBox2.Location = new System.Drawing.Point(41, 392);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(56, 38);
-			this.pictureBox2.TabIndex = 41;
-			this.pictureBox2.TabStop = false;
+			this.picBoxArrow2.BackColor = System.Drawing.Color.Transparent;
+			this.picBoxArrow2.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
+			this.picBoxArrow2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.picBoxArrow2.Location = new System.Drawing.Point(41, 392);
+			this.picBoxArrow2.Name = "picBoxArrow2";
+			this.picBoxArrow2.Size = new System.Drawing.Size(56, 38);
+			this.picBoxArrow2.TabIndex = 41;
+			this.picBoxArrow2.TabStop = false;
 			// 
 			// lblPressTab
 			// 
@@ -864,7 +871,7 @@
 			this.lblPressTab2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblPressTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPressTab2.ForeColor = System.Drawing.SystemColors.Control;
-			this.lblPressTab2.Location = new System.Drawing.Point(8, 450);
+			this.lblPressTab2.Location = new System.Drawing.Point(8, 444);
 			this.lblPressTab2.Name = "lblPressTab2";
 			this.lblPressTab2.Size = new System.Drawing.Size(126, 15);
 			this.lblPressTab2.TabIndex = 40;
@@ -879,7 +886,7 @@
 			this.btnStartGame.Location = new System.Drawing.Point(22, 491);
 			this.btnStartGame.Name = "btnStartGame";
 			this.btnStartGame.Size = new System.Drawing.Size(99, 42);
-			this.btnStartGame.TabIndex = 2;
+			this.btnStartGame.TabIndex = 3;
 			this.btnStartGame.Text = "Start Game";
 			this.btnStartGame.UseVisualStyleBackColor = false;
 			this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
@@ -897,18 +904,56 @@
 			this.lblPlayerTurn.TabIndex = 44;
 			this.lblPlayerTurn.Text = "Players Turn:";
 			// 
+			// picBoxArrow3
+			// 
+			this.picBoxArrow3.BackColor = System.Drawing.Color.Transparent;
+			this.picBoxArrow3.BackgroundImage = global::Connect_4.Properties.Resources.BRUSH_arrow_tictactoe;
+			this.picBoxArrow3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.picBoxArrow3.Location = new System.Drawing.Point(59, 468);
+			this.picBoxArrow3.Name = "picBoxArrow3";
+			this.picBoxArrow3.Size = new System.Drawing.Size(22, 20);
+			this.picBoxArrow3.TabIndex = 45;
+			this.picBoxArrow3.TabStop = false;
+			// 
+			// picBoxRed
+			// 
+			this.picBoxRed.BackColor = System.Drawing.Color.Transparent;
+			this.picBoxRed.BackgroundImage = global::Connect_4.Properties.Resources.Red_Coin;
+			this.picBoxRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.picBoxRed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.picBoxRed.Location = new System.Drawing.Point(103, 215);
+			this.picBoxRed.Name = "picBoxRed";
+			this.picBoxRed.Size = new System.Drawing.Size(24, 20);
+			this.picBoxRed.TabIndex = 46;
+			this.picBoxRed.TabStop = false;
+			// 
+			// picBoxWhite
+			// 
+			this.picBoxWhite.BackColor = System.Drawing.Color.Transparent;
+			this.picBoxWhite.BackgroundImage = global::Connect_4.Properties.Resources.White_Coin;
+			this.picBoxWhite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.picBoxWhite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.picBoxWhite.Location = new System.Drawing.Point(103, 333);
+			this.picBoxWhite.Name = "picBoxWhite";
+			this.picBoxWhite.Size = new System.Drawing.Size(24, 20);
+			this.picBoxWhite.TabIndex = 47;
+			this.picBoxWhite.TabStop = false;
+			// 
 			// Connect4
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::Connect_4.Properties.Resources.Connect_4_column;
 			this.ClientSize = new System.Drawing.Size(840, 623);
+			this.Controls.Add(this.picBoxWhite);
+			this.Controls.Add(this.picBoxRed);
+			this.Controls.Add(this.picBoxArrow3);
 			this.Controls.Add(this.lblPlayerTurn);
 			this.Controls.Add(this.btnStartGame);
 			this.Controls.Add(this.lblPressTab);
-			this.Controls.Add(this.pictureBox2);
+			this.Controls.Add(this.picBoxArrow2);
 			this.Controls.Add(this.lblPressTab2);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.picBoxArrow1);
 			this.Controls.Add(this.lblEnterNames);
 			this.Controls.Add(this.lblPlayer2);
 			this.Controls.Add(this.lblPlayer1);
@@ -971,8 +1016,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.picBox40)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox39)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.picBox36)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxArrow3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxRed)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBoxWhite)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1034,12 +1082,15 @@
 		private System.Windows.Forms.Label lblPlayer1;
 		private System.Windows.Forms.Label lblPlayer2;
 		private System.Windows.Forms.Label lblEnterNames;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.PictureBox picBoxArrow1;
+		private System.Windows.Forms.PictureBox picBoxArrow2;
 		private System.Windows.Forms.Label lblPressTab;
 		private System.Windows.Forms.Label lblPressTab2;
 		private System.Windows.Forms.Button btnStartGame;
 		private System.Windows.Forms.Label lblPlayerTurn;
+		private System.Windows.Forms.PictureBox picBoxArrow3;
+		private System.Windows.Forms.PictureBox picBoxRed;
+		private System.Windows.Forms.PictureBox picBoxWhite;
 	}
 }
 

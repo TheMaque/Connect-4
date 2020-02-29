@@ -72,24 +72,28 @@ namespace Connect_4
 			UpdateTheBoardArray(row, column);
 
 
-
 			if (CheckWinner())
 			{
-				// announce winner
+				// Announce winner
 				ResetBoard("Disable");
-				MessageBox.Show("There is a winner");
+				MessageBox.Show(" There is a winner");
 				grpGameBoard.Enabled = false;
+			}
+			else if (Turns == 27)
+			{
+				MessageBox.Show("The 28 turns have been exceeded there has been a draw. Click options and reset!", "Oops.");
+				grpGameBoard.Enabled = false;
+				btnStartGame.Enabled = false;
 			}
 			else
 			{
 				playerTurn = !playerTurn;
 				PlayerID();
-				
-			
-			}
+	
+				turn_count = SetCountForPlayer();
 
-		
-			
+				Turns++;
+			}
 
 		}
 
@@ -231,7 +235,7 @@ namespace Connect_4
 			string rowPattern = GenerateRowPattern();
 			string columnPattern = GenerateColumnPattern();
 			string diagonal1Pattern = GenerateDiagonal1Pattern();
-			//string diagonal2Pattern = GenerateDiagonal2Pattern();
+			string diagonal2Pattern = GenerateDiagonal2Pattern();
 
 			if (rowPattern.Contains("WWWW") || rowPattern.Contains("RRRR"))
 			{
@@ -245,14 +249,19 @@ namespace Connect_4
 			{
 				return true;
 			}
-			//else if (diagonal2Pattern.Contains("WWWW") || diagonal2Pattern.Contains("RRRR"))
-			//{
-			//	return true;
-			//}
+			else if (diagonal2Pattern.Contains("WWWW") || diagonal2Pattern.Contains("RRRR"))
+			{
+				return true;
+			}
 			else
 			{
 				return false;
 			}
+		}
+
+		private int SetCountForPlayer()
+		{
+			return (turn_count == 0) ? 0 : 1;
 		}
 		/// <summary>
 		/// Checks if both name textboxes are filled in order to start a game. 
@@ -321,6 +330,10 @@ namespace Connect_4
 
 			txtPlayer1.Text = null;
 			txtPlayer2.Text = null;
+
+			txtPlayer1.Enabled = true;
+			txtPlayer2.Enabled = true;
+
 
 			btnStartGame.Enabled = false;
 
@@ -444,6 +457,10 @@ namespace Connect_4
 		private void btnStartGame_Click(object sender, EventArgs e)
 		{
 			grpGameBoard.Enabled = true;
+			lblTurn.Text = txtPlayer1.Text;
+			btnStartGame.Enabled = false;
+			txtPlayer1.Enabled = false;
+			txtPlayer2.Enabled = false;
 		}
 
 		// Load event to clear board array and reset board on load. 
@@ -451,6 +468,11 @@ namespace Connect_4
 		{
 			ClearTheBoardArray();
 			ResetGameBoard();
+
+			while (grpGameBoard.Enabled == true)
+			{
+				btnStartGame.Enabled = false;
+			}
 		}
 	}
 }
