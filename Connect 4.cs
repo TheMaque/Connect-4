@@ -76,7 +76,7 @@ namespace Connect_4
 			{
 				// Announce winner
 				ResetBoard("Disable");
-				MessageBox.Show(" There is a winner");
+				MessageBox.Show(lblTurn.Text + " has won the game!", "Congrats,  we have a winner!");
 				grpGameBoard.Enabled = false;
 			}
 			else if (Turns == 27)
@@ -138,16 +138,6 @@ namespace Connect_4
 		private string SetPlayerValue()
 		{
 			return (playerTurn) ? "R" : "W";
-		}
-
-
-		/// <summary>
-		/// Turns count to zero for when game is reset/
-		/// </summary>
-		/// <returns>Turn_Count to value 0.
-		private void TurnCountReset()
-		{
-			turn_count = 0;
 		}
 
 
@@ -261,7 +251,7 @@ namespace Connect_4
 
 		private int SetCountForPlayer()
 		{
-			return (turn_count == 0) ? 0 : 1;
+			return (turn_count == 0) ? 1 : 0;
 		}
 		/// <summary>
 		/// Checks if both name textboxes are filled in order to start a game. 
@@ -322,7 +312,6 @@ namespace Connect_4
 		{
 			MassSetPictureBoxEnable(true);
 			MassSetPictureBoxImage();
-			TurnCountReset();
 			ClearTheBoardArray();
 			ResetGameBoard();
 
